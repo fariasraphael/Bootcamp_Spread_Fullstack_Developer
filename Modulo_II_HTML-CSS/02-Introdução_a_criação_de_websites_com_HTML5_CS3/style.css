@@ -29,6 +29,7 @@ a {
     font-style: italic;
     margin: 0;
     margin-bottom: 15px;
+    font-tra
     }
 
 .post {
@@ -56,4 +57,5 @@ a {
 }
 .contact_list li a {
     text-decoration: none;
+    list
 }

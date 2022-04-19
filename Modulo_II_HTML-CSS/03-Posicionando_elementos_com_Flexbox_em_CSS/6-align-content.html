@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align content</title>
+
+    <Style>
+        .container{
+            height: 400PX;
+            max-width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid black;
+        }
+
+        .item{
+            background-color: orangered;
+            padding: 0 5px;
+            margin: 5px;
+            flex: 1;
+            text-align: center;
+            color: white;
+            border: 2px solid black;
+        }
+
+        .stretch{
+            align-content: stretch;
+        }
+
+        .center{
+            align-content: center;
+        }
+
+        .flex-start{
+            align-content: flex-start;
+        }
+
+        .flex-end{
+            align-content: flex-end;
+        }
+
+        .space-around{
+            align-content: space-around;
+        }
+
+        .space-between{
+            align-content: space-between;
+        }
+    </Style>
+</head>
+<body>
+    <p>stretch</p>
+    <div class="container stretch">
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis. </div>
+        <div class="item">Mussum Ipsum, cacilds</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis.</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis. Em pé sem cair, deitado sem dormir.</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+    </div>
+
+    <p>center</p>
+    <div class="container center">
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis. </div>
+        <div class="item">Mussum Ipsum, cacilds</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis.</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis. Em pé sem cair, deitado sem dormir.</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+    </div>
+
+    <p>flex-start</p>
+    <div class="container flex-start">
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis. </div>
+        <div class="item">Mussum Ipsum, cacilds</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis.</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis. Em pé sem cair, deitado sem dormir.</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+    </div>
+
+    <p>flex-end</p>
+    <div class="container flex-end">
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis. </div>
+        <div class="item">Mussum Ipsum, cacilds</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis.</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis. Em pé sem cair, deitado sem dormir.</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+    </div>
+
+    <p>space-around</p>
+    <div class="container space-around">
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis. </div>
+        <div class="item">Mussum Ipsum, cacilds</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis.</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis. Em pé sem cair, deitado sem dormir.</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+    </div>
+
+    <p>space-between</p>
+    <div class="container space-between">
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis. </div>
+        <div class="item">Mussum Ipsum, cacilds</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis.</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis. Em pé sem cair.</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis</div>
+    </div>
+</body>
+</html>
