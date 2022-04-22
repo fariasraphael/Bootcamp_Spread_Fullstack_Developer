@@ -1,0 +1,149 @@
+Flex box
+
+Foi pensado como modelo de layout unidirecional
+seu metodo visa oferecer uma distribuição de espaço entre 
+
+Os itens de uma interface e recursos de alinhamento
+Apresentar os fundamentos e aplicações da
+propriedade flexbox na criação de layouts
+responsivos, sem a necessidade a definição de
+valores fixos. 
+
+É a tag que envolve os itens, será nela que iremos aplicar a propriedade “display: flex”. Transforma todos os seus itens filhos em flex itens.
+
+Independente do valor, os itens sao alinhados a partir do momento que é inicializado com o display flex
+
+pode ser feito em qquer tipo de tag, a partir do momento que essa teg possui itens filhos ela é passivel de ser aplicada a propriedade do display flax,
+
+FLEX CONTAINER
+Propriedades relacionadas:
+● display: inicializador do container;
+● flex-direction: faz o direcionamento desses itens em linha ou coluna;
+● flex-wrap: se aplica para quebra de linha ou não;
+● flex-flow: abreviação para o direct e wrap;
+● justify-content: alinha os itens do container de acordo com a sua direção;
+● align-items: alinha os itens de acordo com o eixo do container;
+● align-content: alinha as linhas do container;
+
+FLEX ITEM
+São os elementos filhos diretos do Flex Container. E também podem se tornar Flex Container.
+São passiveis de se aplicar a propriedade display para se tornarem um flex-container. Esse é um processo recursivo.
+
+Propriedades relacionadas:
+● flex-grow: define o fator de crescimento;
+● flax-basis: define o valor inicial desse item antes da distribuição do espaço restante dentro do container;
+● flex-shrink: define a capacidade de redução do item;
+● flex: abreviação para as tres propriedades acima grow, basis e srink;
+● order: se relaciona a ordem de distribuição e listagem dos itens;
+● align-self: define o alinhamento de um item especifico desse container.
+
+FLEX CONTAINER
+
+Display: Flex
+Torna a tag um elemento do tipo flex container, e assim
+automaticamente todos os seus filhos diretos desta tag, tornamse em flex items.
+A propriedade display flax se aplicam a qquer tipo de tag no html, assim como pode-se aplicar aos flex itens os tornando flax container
+
+Flex direction: 
+É a propriedade que estabelece o eixo principal do container, definindo assim a direção que os flex items são colocados no flex container. 
+São dois tipos de eixos: linha (horizontal) e coluna(vertical) e suas posições reversas, que é a ordenação inversa desses itens.
+
+row: quando se iniciliza o container ele vem como padrão  setado como row: da esquerda para a direita.
+
+row-reverse: traz o sentido oposto da direção row: da direita pra esquerda
+
+column: modifica para o eixo vertical, eixo de coluna. a ordenação dos itens se dá de cima para baixo.
+
+column-reverse: traz sentido oposto ao da column, os itens se organizam de baixo para cima
+
+Flex-wrap:
+É a propriedade que define se os itens devem ou não quebrar a linha.
+Por padrão eles não quebram linhas, isso faz com que os flex itens sejam compactados além do limite do conteúdo.
+
+nowrap: é o comportamento padrão, não permite a quebre de linha.
+
+wrap: permite a quebra de linha assim que um dos flex itens não puder mais ser compactado. A partir do primeiro elemento que nao pode mais ser comportado dentro do container esse é direcionado para a linha de baixo.
+
+wrap-reverse: possui a mesma lógica do wrap, se diferencia por direcionar o item que não pode mais ser comportado no containar para a linha superior.
+
+flex-flow
+É um atalho para as propriedades flex-direction e flex-wrap.
+Porém seu uso não é tão comum, visto que, quando mudamos o
+flex-direction para column, mantemos o padrão do flex-wrap que é nowrap.
+
+justify-content
+Essa propriedade vai se encarregar de alinhar os itens dentro do container de acordo com a direção pretendida e tratar da distribuição de espaçamento entre eles.
+OBS: caso seus itens esteja ocupando 100% de todo o container, ela não se aplica.
+
+flex-start: faz o alinhamento no inicio do container
+flex-end: faz o alinhamento no final do container
+center: leva todos os itens para o meio do container
+space-between: cria um espaço igual a todos os elementos. Ele poe o primeiro elemento muito proximo ao inicio do container e outro elemento ele leva para proximo da outra borda
+space-around: trata o espaçamento do meio tornando ele duas vezes maior que o inicial e o final
+
+align items
+Trata do alinhamento dos flex itens de acordo com o eixo do container.
+O alinhamento é diferente para quando os itens estão em colunas ou linhas.
+Permite o alinhamento central no eixo vertical.
+
+center: traz todos os itens ao centro
+stretch: é o padrão, faz com que os itens creção igualmente
+
+Align-content
+É a propriedade responsável por tratar o alinhamento das linhas do container em relação ao eixo vertical do container.
+
+precisa que o container utilize quebre de linha
+precisa que a altura do container seja maior que a soma das linhas dos itens
+
+Tipos de alinhamento
+
+● center: alinhamento dos itens ao centro
+● stretch: é o padrão e os flex itens crescem igualmente, crescimento igualitario entre os itens, ele pega o maior elemento daquela linha e faz com que eles cresçam de acordo com aquele elemento.
+● flex-start: alinhamento dos itens no início
+● flex-end: alinhamento dos itens no final
+● space-between: cria um espaçamento igual entre os elementos
+● space-around: os espaçamentos do meio são duas vezes
+maiores que o inicial e final 
+flex-start: alinha os itens ao inicio
+flex-end: alinha os itens no final
+baseline: utiliza o eixo da linha relacionado ao texto que ta dentro do conteudo dos itens. baseline: alinhamento de acordo com a linha base da tipografia dos itens
+
+Flex Items
+Flex-grow
+
+Define a proporcionalidade de crescimentos dos itens,
+respeitando o tamanho de seus conteúdos internos. Ela não faz a compressão ou a expanção que faça com que o conteudo do item seja desrrespeitado, não deixa ele vazar do item.
+OBS: não irá funcionar caso tenhamos adicionado justify-content ao nosso flex container.
+
+flax-basis
+É a propriedade que estabelecer o tamano inicial do item antes das distribuições de espaço restante dentro dele, usando como base o conteudo interno disposto.
+Ela pega o tamanho minimo que o item vai precisar ter e após ele distribui a sobra do espaço antes e após o conteúdo.
+
+valores possiveis
+auto: caso o item nao tenha tamanho, este sera proporcional ao conteudo do item
+se ele tiver um flex-grow definido ele tentará adaptar esses itens tomando o tamanho minimo sempre igual, ocupando o total do container
+podem ter valores exatos previamente definidos. esse valor sera o tamanho minimo que o item vai ter. a partir do momento que o tamanho interno do item for muito maior que o valor definido ele vai crescer a ponto de nao ter espaço e vazar do item
+zero: quando ele está em zero terá relação com a definição do flex-grow.
+
+Flex-shrink
+é a propriedade que estabelece a capacidade de redução ou de compressão do tamanha de um item.
+
+flex
+Esta propriedade é um atalho ou abreviação de escrita para as
+propriedades: grow, shrink e basis, exatamente nessa ordem.
+
+order
+lida diretamente com a ordenação dos itens e está relacionada com os flex-items
+
+align-self
+É a propriedade que estabelece o alinhamento de modo individual sobre um determinado item.
+pode-se selecionar item aleatorios e fazer com que eles alinhem diferentemente do que esta disposto por padrão
+é importante que o container nao tenha align-item definido
+
+● auto: valor padrão, irá respeitar a definição de align-items do container
+● flex-start: ao início do container
+● flex-end: ao final do container
+● center: relativo ao centro de acordo com o eixo
+● stretch: ocupa todo os espaço relativo
+● baseline: utiliza a linha base da tipografia 
+
